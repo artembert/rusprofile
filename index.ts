@@ -1,3 +1,5 @@
-import {encodeRawResponse} from "./src/encode-raw-response";
+import { getPage } from "./src/response";
+import { getLinksFromSearchPageController } from "./src/controllers/get-links-from-search-page-controller";
 
-encodeRawResponse();
+getPage();
+// getLinksFromSearchPageController();
