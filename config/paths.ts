@@ -2,6 +2,10 @@ export const markupFoldersPaths = {
   kirovsk: "data/markup/kirovsk"
 };
 
+export const detailsMarkups = {
+  kirovsk: "data/details-markup/kirovsk"
+};
+
 export const markupPaths = {
   kirovsk: markupFoldersPaths + "/kirovsk",
 };
