@@ -1,4 +1,4 @@
-import { linksPath, markupPaths } from "../../config/paths";
+import { linksPath } from "../../config/paths";
 import { getLinksFromSearchPage } from "../components/get-links-from-search-page";
 import * as fs from "fs";
 
