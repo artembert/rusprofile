@@ -1,5 +1,5 @@
 export const markupPaths = {
-  kirovsk: "data/markup/kirovsk",
+  kirovsk: "data/markup/kirovsk/kirovsk",
 };
 
 export const linksPath = "data/links.json";
