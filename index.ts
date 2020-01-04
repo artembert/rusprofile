@@ -1,4 +1,4 @@
-import { getPage } from "./src/response";
+import { getPage } from "./src/components/get-page";
 import { getLinksFromSearchPageController } from "./src/controllers/get-links-from-search-page-controller";
 import { writeMarkup } from "./src/write-markup";
 
