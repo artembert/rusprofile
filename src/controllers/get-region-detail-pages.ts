@@ -11,8 +11,8 @@ getRegionDetailPages();
 async function getRegionDetailPages() {
   const rawLinks = await readFile(`${linksPaths.kirovsk}.json`, "utf8");
   const links = (JSON.parse(rawLinks) as string[]);
-  for (const link of links) {
-    console.log("Link: ", link);
+  for (const [index, link] of links.entries()) {
+    console.log(`Link: #${index} :`, link);
     await getDetailPage(regionName, link);
   }
 }
