@@ -20,13 +20,14 @@ export function getPage() {
         "upgrade-insecure-requests": "1"
       })
       .set("Content-Type", "text/html; charset=utf-8")
+      .set("Content-Encoding", "gzip")
       .send();
 
     if (response.ok) {
       console.log(response.text.substring(0, 100));
-      writeMarkup(JSON.stringify(response.text));
+      writeMarkup(response.text);
     } else {
-      alert("Ошибка HTTP: " + response.status);
+      console.log("Ошибка HTTP: " + response.status);
     }
   })();
 }

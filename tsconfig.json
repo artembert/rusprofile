@@ -6,7 +6,8 @@
     "sourceMap": true,
     "sourceRoot": "./src",
     "outDir": "./dist",
-    "allowUnreachableCode": true
+    "allowUnreachableCode": true,
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules"
