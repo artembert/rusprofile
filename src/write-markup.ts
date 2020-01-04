@@ -1,7 +1,9 @@
 import * as fs from "fs";
-import {markupPaths} from "../config/paths";
+import { promisify } from "util";
 
-export function writeMarkup(text: string) {
-  fs.writeFileSync(markupPaths.path, text);
-  console.log(`file [${markupPaths.path}] saved`);
+const writeFile = promisify(fs.writeFile);
+
+export async function writeMarkup(path: string, text: string) {
+  await writeFile(path, text);
+  console.log(`file [${path}] saved`);
 }
