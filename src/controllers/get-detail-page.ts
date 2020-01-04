@@ -2,8 +2,6 @@ import { detailsMarkups } from "../../config/paths";
 import { getPage } from "../components/get-page";
 import { writeMarkup } from "../write-markup";
 
-getDetailPage("kirovsk", "6897533");
-
 export async function getDetailPage(region: string, id: string) {
   const filePath = getFilePath(region, id);
   const detailMarkup = await getPage(getUrl(id));

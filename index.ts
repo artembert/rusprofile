@@ -13,7 +13,7 @@ const pageNumber = 1;
     await writeMarkup(markupPath, searchPageMarkup);
     const links = getLinksFromSearchPage(markupPath);
     fs.appendFileSync(linksPath, JSON.stringify(links, undefined, 4));
-    console.log(`links saved to ${linksPath}`);
+    console.log(`Links saved to ${linksPath}`);
   } else {
     console.error("Error: no markup!");
   }

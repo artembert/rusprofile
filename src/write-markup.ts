@@ -5,5 +5,5 @@ const writeFile = promisify(fs.writeFile);
 
 export async function writeMarkup(path: string, text: string) {
   await writeFile(path, text);
-  console.log(`file [${path}] saved`);
+  console.log(`File [${path}] saved`);
 }
