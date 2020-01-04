@@ -21,7 +21,12 @@ export function getPage(url: string): Promise<string> {
       .send();
 
     if (response.ok) {
-      console.log(response.text.substring(0, 100));
+      console.log(
+        response.text
+          .substring(0, 100)
+          .replace(/\n/gi, "")
+          .replace(/  /gi, "")
+      );
     } else {
       console.log("Ошибка HTTP: " + response.status);
     }
