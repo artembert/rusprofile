@@ -1,6 +1,7 @@
 import * as superagen from "superagent";
 
 export function getPage(url: string): Promise<string> {
+  console.log("URL:", url.substring(0, 40) + "...");
   return (async () => {
     let response = await superagen
       .get(url)
