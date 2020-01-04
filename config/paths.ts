@@ -1,5 +1,9 @@
+export const markupFoldersPaths = {
+  kirovsk: "data/markup/kirovsk"
+};
+
 export const markupPaths = {
-  kirovsk: "data/markup/kirovsk/kirovsk",
+  kirovsk: markupFoldersPaths + "/kirovsk",
 };
 
 export const linksPath = "data/links.json";
