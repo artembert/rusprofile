@@ -15,3 +15,7 @@ export const linksPath = "data/links.json";
 export const linksPaths = {
   kirovsk: "data/links/kirovsk"
 };
+
+export const companiesAnnotationsPaths = {
+  kirovsk: "data/annotations/kirovsk"
+};
