@@ -1,8 +1,8 @@
 import * as cheerio from "cheerio";
 import * as fs from "fs";
-import { CompanyDetails } from "../types/company-details";
+import { Details } from "../types/details";
 
-export function getINNsFromSearchPage(filePath: string): CompanyDetails[] {
+export function getINNsFromSearchPage(filePath: string): Details[] {
   const markup = fs.readFileSync(filePath);
   const $: CheerioStatic = cheerio.load(markup);
   return $(".company-item")
