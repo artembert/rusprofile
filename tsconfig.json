@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "resolveJsonModule": true,
-    "target": "esnext",
+    "target": "es2018",
     "sourceMap": true,
     "sourceRoot": "./src",
     "outDir": "./dist",
