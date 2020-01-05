@@ -19,3 +19,7 @@ export const linksPaths = {
 export const companiesAnnotationsPaths = {
   kirovsk: "data/annotations/kirovsk"
 };
+
+export const companiesDetailsPaths = {
+  kirovsk: "data/details/kirovsk"
+};
