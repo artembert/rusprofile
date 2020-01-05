@@ -21,5 +21,6 @@ export const companiesAnnotationsPaths = {
 };
 
 export const companiesDetailsPaths = {
-  kirovsk: "data/details/kirovsk"
+  kirovsk: "data/details/kirovsk",
+  kirovskFiltered: "data/details/kirovsk-filtered",
 };

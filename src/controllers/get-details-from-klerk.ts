@@ -29,6 +29,10 @@ async function getDetailsFromKlerkController() {
     `${companiesDetailsPaths.kirovsk}.json`,
     JSON.stringify(companies, undefined, 4)
   );
+  fs.writeFileSync(
+    `${companiesDetailsPaths.kirovskFiltered}.json`,
+    JSON.stringify(companies.filter(details => !details.error))
+  )
 }
 
 function getUrl(INN: string | number): string {
