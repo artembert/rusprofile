@@ -24,3 +24,8 @@ export const companiesDetailsPaths = {
   kirovsk: "data/details/kirovsk",
   kirovskFiltered: "data/details/kirovsk-filtered",
 };
+
+
+export const detailsTreatedPaths = {
+  kirovsk: "data/details-treated/kirovsk"
+};
