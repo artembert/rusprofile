@@ -22,7 +22,16 @@ export function getINNsFromSearchPage(filePath: string): Details[] {
         .find("dd")
         .text();
       return {
-        INN
+        INN,
+        org_name: undefined,
+        revenue_date: undefined,
+        expenses: undefined,
+        revenue: undefined,
+        short_name: undefined,
+        okved_main_name: undefined,
+        okved_main_code: undefined,
+        employees: undefined,
+        place_info: undefined,
       };
     });
 }
