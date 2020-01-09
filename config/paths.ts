@@ -33,3 +33,8 @@ export const klerkDetailsJSONPaths = {
   kirovsk: "data/klerk-details-json/kirovsk",
   roshhino: "data/klerk-details-json/roshhino",
 };
+
+export const klerkDetailsCSVPaths = {
+  kirovsk: "data/klerk-details-csv/kirovsk",
+  roshhino: "data/klerk-details-csv/roshhino",
+};
