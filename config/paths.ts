@@ -25,15 +25,13 @@ export const companiesAnnotationsPaths = {
   roshhino: "data/annotations/roshhino",
 };
 
-export const companiesDetailsPaths = {
-  kirovsk: "data/details/kirovsk",
-  kirovskFiltered: "data/details/kirovsk-filtered",
-  roshhino: "data/details/roshhino",
-  roshhinoFiltered: "data/details/roshhino-filtered",
+export const klerkDetailsRawPaths = {
+  kirovsk: "data/klerk-details-raw/kirovsk",
+  roshhino: "data/klerk-details-raw/roshhino",
 };
 
 
-export const detailsTreatedPaths = {
-  kirovsk: "data/details-treated/kirovsk",
-  roshhino: "data/details-treated/roshhino",
+export const klerkDetailsPaths = {
+  kirovsk: "data/klerk-details/kirovsk",
+  roshhino: "data/klerk-details/roshhino",
 };

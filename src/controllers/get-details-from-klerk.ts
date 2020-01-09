@@ -2,14 +2,12 @@ import { getRequestToKlerk } from "../components/make-request-to-klerk";
 import * as fs from "fs";
 import {
   companiesAnnotationsPaths,
-  companiesDetailsPaths
+  klerkDetailsRawPaths
 } from "../../config/paths";
 import { Details } from "../types/details";
 import { regionName } from "../../config/session-variables";
 
-getDetailsFromKlerkController();
-
-async function getDetailsFromKlerkController() {
+export async function getDetailsFromKlerkController() {
   const companiesAnnotations: Details[] = JSON.parse(
     fs.readFileSync(`${companiesAnnotationsPaths[regionName]}.json`, "utf8")
   );
@@ -19,21 +17,21 @@ async function getDetailsFromKlerkController() {
   for (const [index, INN] of INNs.entries()) {
     console.log(`INN: #${index} :`, INN);
     companies.push(await getRequestToKlerk(getUrl(INN)));
-    if (index && index % 100 === 0) {
+    if (index && index % 20 === 0) {
       fs.writeFileSync(
-        `${companiesDetailsPaths.kirovsk}.json`,
+        `${klerkDetailsRawPaths[regionName]}.json`,
         JSON.stringify(companies, undefined, 4)
       );
     }
   }
   fs.writeFileSync(
-    `${companiesDetailsPaths.kirovsk}.json`,
-    JSON.stringify(companies, undefined, 4)
+    `${klerkDetailsRawPaths[regionName]}.json`,
+    JSON.stringify(
+      companies.filter(details => !details.error),
+      undefined,
+      4
+    )
   );
-  fs.writeFileSync(
-    `${companiesDetailsPaths.kirovskFiltered}.json`,
-    JSON.stringify(companies.filter(details => !details.error))
-  )
 }
 
 function getUrl(INN: string | number): string {
