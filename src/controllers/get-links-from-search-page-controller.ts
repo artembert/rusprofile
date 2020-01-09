@@ -2,9 +2,10 @@ import { linksPaths, markupFoldersPaths } from "../../config/paths";
 import { getLinksFromSearchPage } from "../components/get-links-from-search-page";
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
 import fs from "fs";
+import { regionName } from "../../config/region";
 
-const markupPath = markupFoldersPaths.kirovsk;
-const linksPath = linksPaths.kirovsk + ".json";
+const markupPath = markupFoldersPaths[regionName];
+const linksPath = linksPaths[regionName] + ".json";
 
 getLinksFromSearchPagesController(markupPath, linksPath);
 

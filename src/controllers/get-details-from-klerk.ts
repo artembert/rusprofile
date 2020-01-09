@@ -5,12 +5,13 @@ import {
   companiesDetailsPaths
 } from "../../config/paths";
 import { Details } from "../types/details";
+import { regionName } from "../../config/region";
 
 getDetailsFromKlerkController();
 
 async function getDetailsFromKlerkController() {
   const companiesAnnotations: Details[] = JSON.parse(
-    fs.readFileSync(`${companiesAnnotationsPaths.kirovsk}.json`, "utf8")
+    fs.readFileSync(`${companiesAnnotationsPaths[regionName]}.json`, "utf8")
   );
   const INNs = companiesAnnotations.map(company => company.INN);
 
