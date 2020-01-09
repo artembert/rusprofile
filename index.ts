@@ -2,6 +2,7 @@ import { downloadSearchPageMarkupController } from "./src/controllers/download-s
 import { getLinksFromSearchPagesController } from "./src/controllers/get-links-from-search-page-controller";
 import { parseSearchPageController } from "./src/controllers/parse-search-page-controller";
 import { getDetailsFromKlerkController } from "./src/controllers/get-details-from-klerk";
+import { parseRawDetailsFromKlerkController } from "./src/controllers/parse-raw-details-from-klerk-controller";
 
 (async () => {
   // * Download search-pages markup
@@ -12,4 +13,6 @@ import { getDetailsFromKlerkController } from "./src/controllers/get-details-fro
   await parseSearchPageController();
   // * Get details from Klerk
   await getDetailsFromKlerkController();
+  // * Parse raw details from Klerk
+  await parseRawDetailsFromKlerkController();
 })();
