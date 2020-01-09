@@ -9,6 +9,7 @@ import { saveDetailsToCsvController } from "./src/controllers/save-details-to-cs
   // * Download search-pages markup
   await downloadSearchPageMarkupController();
   // * Get links from search-pages
+  // NOT REQUIRED
   await getLinksFromSearchPagesController();
   // * Parse search-pages
   await parseSearchPageController();
