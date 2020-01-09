@@ -4,12 +4,9 @@ import { getFilenamesFromFolder } from "../components/get-filenames-from-folder"
 import fs from "fs";
 import { regionName } from "../../config/session-variables";
 
-const markupPath = markupFoldersPaths[regionName];
-const linksPath = linksPaths[regionName] + ".json";
-
-getLinksFromSearchPagesController(markupPath, linksPath);
-
-async function getLinksFromSearchPagesController(markupPath: string, linksPath: string) {
+export async function getLinksFromSearchPagesController() {
+  const markupPath = markupFoldersPaths[regionName];
+  const linksPath = linksPaths[regionName];
   const markupFilenames: string[] = await getFilenamesFromFolder(markupPath);
   const links: string[] = markupFilenames.reduce((accumulator, fileName) => {
     const links = getLinksFromSearchPage(`${markupPath}/${fileName}`);
