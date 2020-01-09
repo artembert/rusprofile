@@ -5,16 +5,11 @@ import {
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
 import { getINNsFromSearchPage } from "../components/get-inns-from-search-page";
 import fs from "fs";
+import { regionName } from "../../config/session-variables";
 
-const markupPath = markupFoldersPaths.kirovsk;
-const companiesAnnotationsPath = companiesAnnotationsPaths.kirovsk + ".json";
-
-parseSearchPageController(markupPath, companiesAnnotationsPath);
-
-async function parseSearchPageController(
-  markupPath: string,
-  annotationsPath: string
-) {
+export async function parseSearchPageController() {
+  const markupPath = markupFoldersPaths[regionName];
+  const annotationsPath = companiesAnnotationsPaths[regionName] + ".json";
   const markupFileNames: string[] = await getFilenamesFromFolder(markupPath);
   const allCompaniesAnnotation: string[] = markupFileNames.reduce(
     (accumulator, fileName) => {
