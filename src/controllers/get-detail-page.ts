@@ -1,4 +1,4 @@
-import { detailsMarkups } from "../../config/paths";
+import { detailsMarkupsPaths } from "../../config/paths";
 import { getPage } from "../components/get-page";
 import { writeMarkup } from "../write-markup";
 
@@ -9,7 +9,7 @@ export async function getDetailPage(region: string, id: string) {
 }
 
 function getFilePath(regionName: string, id: string): string {
-  return `${detailsMarkups[regionName]}/${id}.html`;
+  return `${detailsMarkupsPaths[regionName]}/${id}.html`;
 }
 
 function getUrl(id: string): string {

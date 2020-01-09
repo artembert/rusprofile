@@ -3,7 +3,7 @@ export const markupFoldersPaths = {
   roshhino: "data/markup/roshhino",
 };
 
-export const detailsMarkups = {
+export const detailsMarkupsPaths = {
   kirovsk: "data/details-markup/kirovsk",
   roshhino: "data/details-markup/roshhino",
 };
@@ -12,8 +12,6 @@ export const markupPaths = {
   kirovsk: "data/markup/kirovsk/kirovsk",
   roshhino: "data/markup/roshhino/roshhino",
 };
-
-export const linksPath = "data/links.json";
 
 export const linksPaths = {
   kirovsk: "data/links/kirovsk.json",
