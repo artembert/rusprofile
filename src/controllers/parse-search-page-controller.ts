@@ -1,5 +1,5 @@
 import {
-  companiesAnnotationsPaths,
+  searchPageDetailsPaths,
   markupFoldersPaths
 } from "../../config/paths";
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
@@ -9,7 +9,7 @@ import { regionName } from "../../config/session-variables";
 
 export async function parseSearchPageController() {
   const markupPath = markupFoldersPaths[regionName];
-  const annotationsPath = companiesAnnotationsPaths[regionName] + ".json";
+  const annotationsPath = searchPageDetailsPaths[regionName] + ".json";
   const markupFileNames: string[] = await getFilenamesFromFolder(markupPath);
   const allCompaniesAnnotation: string[] = markupFileNames.reduce(
     (accumulator, fileName) => {

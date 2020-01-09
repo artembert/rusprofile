@@ -20,7 +20,7 @@ export const linksPaths = {
   roshhino: "data/links/roshhino.json",
 };
 
-export const companiesAnnotationsPaths = {
+export const searchPageDetailsPaths = {
   kirovsk: "data/annotations/kirovsk",
   roshhino: "data/annotations/roshhino",
 };

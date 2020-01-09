@@ -1,7 +1,7 @@
 import { getRequestToKlerk } from "../components/make-request-to-klerk";
 import * as fs from "fs";
 import {
-  companiesAnnotationsPaths,
+  searchPageDetailsPaths,
   klerkDetailsRawPaths
 } from "../../config/paths";
 import { Details } from "../types/details";
@@ -9,7 +9,7 @@ import { regionName } from "../../config/session-variables";
 
 export async function getDetailsFromKlerkController() {
   const companiesAnnotations: Details[] = JSON.parse(
-    fs.readFileSync(`${companiesAnnotationsPaths[regionName]}.json`, "utf8")
+    fs.readFileSync(`${searchPageDetailsPaths[regionName]}.json`, "utf8")
   );
   const INNs = companiesAnnotations.map(company => company.INN);
 
