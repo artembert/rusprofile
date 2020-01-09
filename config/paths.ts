@@ -29,7 +29,7 @@ export const klerkDetailsRawPaths = {
 };
 
 
-export const klerkDetailsPaths = {
-  kirovsk: "data/klerk-details/kirovsk",
-  roshhino: "data/klerk-details/roshhino",
+export const klerkDetailsJSONPaths = {
+  kirovsk: "data/klerk-details-json/kirovsk",
+  roshhino: "data/klerk-details-json/roshhino",
 };
