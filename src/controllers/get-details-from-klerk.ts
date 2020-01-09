@@ -5,7 +5,7 @@ import {
   companiesDetailsPaths
 } from "../../config/paths";
 import { Details } from "../types/details";
-import { regionName } from "../../config/region";
+import { regionName } from "../../config/session-variables";
 
 getDetailsFromKlerkController();
 

@@ -3,11 +3,9 @@ import { writeMarkup } from "./src/write-markup";
 import { linksPaths, markupPaths } from "./config/paths";
 import { getLinksFromSearchPage } from "./src/components/get-links-from-search-page";
 import * as fs from "fs";
-import { regionName } from "./config/region";
+import { pageNumber, regionName } from "./config/session-variables";
 import { getRusprofileQuery } from "./config/rusprofile-query";
 import { Region } from "./src/types/region";
-
-const pageNumber = 1;
 
 (async () => {
   const markupPath = getFilePath(regionName, pageNumber);

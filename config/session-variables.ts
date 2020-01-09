@@ -3,3 +3,4 @@ import { QueryProps, regionQuery } from "./rusprofile-query";
 
 export const regionName: Region = "roshhino";
 export const region: QueryProps = regionQuery.get(regionName)[0];
+export const pageNumber: number = 1;

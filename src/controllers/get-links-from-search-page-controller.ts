@@ -2,7 +2,7 @@ import { linksPaths, markupFoldersPaths } from "../../config/paths";
 import { getLinksFromSearchPage } from "../components/get-links-from-search-page";
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
 import fs from "fs";
-import { regionName } from "../../config/region";
+import { regionName } from "../../config/session-variables";
 
 const markupPath = markupFoldersPaths[regionName];
 const linksPath = linksPaths[regionName] + ".json";
