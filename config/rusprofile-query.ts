@@ -68,6 +68,24 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
         pages: 3
       }
     ]
+  ],
+  [
+    "mga",
+    [
+      {
+        query: "?query=187300&type=ul&search_inactive=2",
+        pages: 2
+      }
+    ]
+  ],
+  [
+    "pavlovo",
+    [
+      {
+        query: "?query=187323&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
   ]
 ]);
 
