@@ -58,3 +58,7 @@ export const klerkDetailsCSVPaths = {
   kirovsk: "data/klerk-details-csv/kirovsk",
   roshhino: "data/klerk-details-csv/roshhino",
 };
+
+export function getKlerkDetailsCSVPaths(): string {
+  return `data/klerk-details-csv/${regionName}.csv`;
+}
