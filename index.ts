@@ -6,17 +6,10 @@ import { parseRawDetailsFromKlerkController } from "./src/controllers/parse-raw-
 import { saveDetailsToCsvController } from "./src/controllers/save-details-to-csv-controller";
 
 (async () => {
-  // * Download search-pages markup
-  await downloadSearchPageMarkupController();
-  // * Get links from search-pages
-  // NOT REQUIRED
-  await getLinksFromSearchPagesController();
-  // * Parse search-pages
-  await parseSearchPageController();
-  // * Get details from Klerk
-  await getDetailsFromKlerkController();
-  // * Parse raw details from Klerk
-  parseRawDetailsFromKlerkController();
-  // * Convert Klerk details to CSV
-  saveDetailsToCsvController()
+  await downloadSearchPageMarkupController(); // * Download search-pages markup
+  await getLinksFromSearchPagesController(); // * Get links from search-pages. NOT REQUIRED
+  await parseSearchPageController(); // * Parse search-pages
+  await getDetailsFromKlerkController(); // * Get details from Klerk
+  parseRawDetailsFromKlerkController(); // * Parse raw details from Klerk
+  saveDetailsToCsvController()// * Convert Klerk details to CSV
 })();
