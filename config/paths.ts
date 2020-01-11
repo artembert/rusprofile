@@ -39,6 +39,10 @@ export const searchPageDetailsPaths = {
   roshhino: "data/annotations/roshhino",
 };
 
+export function getSearchPageDetailsPaths(): string {
+  return `data/annotations/${regionName}.json`;
+}
+
 export const klerkDetailsRawPaths = {
   kirovsk: "data/klerk-details-raw/kirovsk",
   roshhino: "data/klerk-details-raw/roshhino",

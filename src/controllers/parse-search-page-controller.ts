@@ -1,15 +1,11 @@
-import {
-  searchPageDetailsPaths,
-  markupFoldersPaths
-} from "../../config/paths";
+import { getMarkupFoldersPath, getSearchPageDetailsPaths } from "../../config/paths";
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
 import { getINNsFromSearchPage } from "../components/get-inns-from-search-page";
 import fs from "fs";
-import { regionName } from "../../config/session-variables";
 
 export async function parseSearchPageController() {
-  const markupPath = markupFoldersPaths[regionName];
-  const annotationsPath = searchPageDetailsPaths[regionName] + ".json";
+  const markupPath = getMarkupFoldersPath();
+  const annotationsPath = getSearchPageDetailsPaths();
   const markupFileNames: string[] = await getFilenamesFromFolder(markupPath);
   const allCompaniesAnnotation: string[] = markupFileNames.reduce(
     (accumulator, fileName) => {
@@ -25,7 +21,7 @@ export async function parseSearchPageController() {
   console.log(
     `Saved companies annotations, ${
       allCompaniesAnnotation.length
-    } items: [${allCompaniesAnnotation.slice(0, 3).join(", ")}...]`
+    } items: [${allCompaniesAnnotation.slice(0, 3).map(item => JSON.stringify(item)).join(", ")}...]`
   );
 
   fs.writeFileSync(
