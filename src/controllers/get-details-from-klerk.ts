@@ -1,15 +1,11 @@
 import { getRequestToKlerk } from "../components/make-request-to-klerk";
 import * as fs from "fs";
-import {
-  searchPageDetailsPaths,
-  klerkDetailsRawPaths
-} from "../../config/paths";
+import { getKlerkDetailsRawPath, getSearchPageDetailsPath } from "../../config/paths";
 import { Details } from "../types/details";
-import { regionName } from "../../config/session-variables";
 
 export async function getDetailsFromKlerkController() {
   const companiesAnnotations: Details[] = JSON.parse(
-    fs.readFileSync(`${searchPageDetailsPaths[regionName]}.json`, "utf8")
+    fs.readFileSync(getSearchPageDetailsPath(), "utf8")
   );
   const INNs = companiesAnnotations.map(company => company.INN);
 
@@ -19,13 +15,13 @@ export async function getDetailsFromKlerkController() {
     companies.push(await getRequestToKlerk(getUrl(INN)));
     if (index && index % 20 === 0) {
       fs.writeFileSync(
-        `${klerkDetailsRawPaths[regionName]}.json`,
+        getKlerkDetailsRawPath(),
         JSON.stringify(companies, undefined, 4)
       );
     }
   }
   fs.writeFileSync(
-    `${klerkDetailsRawPaths[regionName]}.json`,
+    getKlerkDetailsRawPath(),
     JSON.stringify(
       companies.filter(details => !details.error),
       undefined,

@@ -19,11 +19,9 @@ export const detailsMarkupsPaths = {
   roshhino: "data/details-markup/roshhino",
 };
 
-export const markupPaths = {
-  kirovsk: "data/markup/kirovsk/kirovsk",
-  roshhino: "data/markup/roshhino/roshhino",
-  shlisselburg: "data/markup/shlisselburg",
-};
+export function getDetailsMarkupsPaths(): string {
+  return `data/details-markup/${regionName}`;
+}
 
 export const linksPaths = {
   kirovsk: "data/links/kirovsk.json",
@@ -39,7 +37,7 @@ export const searchPageDetailsPaths = {
   roshhino: "data/annotations/roshhino",
 };
 
-export function getSearchPageDetailsPaths(): string {
+export function getSearchPageDetailsPath(): string {
   return `data/annotations/${regionName}.json`;
 }
 
@@ -48,6 +46,9 @@ export const klerkDetailsRawPaths = {
   roshhino: "data/klerk-details-raw/roshhino",
 };
 
+export function getKlerkDetailsRawPath(): string {
+  return `data/klerk-details-raw/${regionName}.json`;
+}
 
 export const klerkDetailsJSONPaths = {
   kirovsk: "data/klerk-details-json/kirovsk",

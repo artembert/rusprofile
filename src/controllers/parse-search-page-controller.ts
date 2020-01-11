@@ -1,11 +1,11 @@
-import { getMarkupFoldersPath, getSearchPageDetailsPaths } from "../../config/paths";
+import { getMarkupFoldersPath, getSearchPageDetailsPath } from "../../config/paths";
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
 import { getINNsFromSearchPage } from "../components/get-inns-from-search-page";
 import fs from "fs";
 
 export async function parseSearchPageController() {
   const markupPath = getMarkupFoldersPath();
-  const annotationsPath = getSearchPageDetailsPaths();
+  const annotationsPath = getSearchPageDetailsPath();
   const markupFileNames: string[] = await getFilenamesFromFolder(markupPath);
   const allCompaniesAnnotation: string[] = markupFileNames.reduce(
     (accumulator, fileName) => {
