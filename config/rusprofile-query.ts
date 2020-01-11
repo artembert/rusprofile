@@ -96,6 +96,15 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
       }
     ]
   ],
+  [
+    "sinjavino",
+    [
+      {
+        query: "?query=187322&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
 ]);
 
 function getSearchPrefix(pageNumber: number): string {
