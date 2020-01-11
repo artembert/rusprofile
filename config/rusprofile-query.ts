@@ -86,7 +86,16 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
         pages: 1
       }
     ]
-  ]
+  ],
+  [
+    "priladozhskij",
+    [
+      {
+        query: "?query=187326&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
 ]);
 
 function getSearchPrefix(pageNumber: number): string {
