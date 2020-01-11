@@ -41,11 +41,6 @@ export function getSearchPageDetailsPath(): string {
   return `data/annotations/${regionName}.json`;
 }
 
-export const klerkDetailsRawPaths = {
-  kirovsk: "data/klerk-details-raw/kirovsk",
-  roshhino: "data/klerk-details-raw/roshhino",
-};
-
 export function getKlerkDetailsRawPath(): string {
   return `data/klerk-details-raw/${regionName}.json`;
 }
@@ -54,6 +49,10 @@ export const klerkDetailsJSONPaths = {
   kirovsk: "data/klerk-details-json/kirovsk",
   roshhino: "data/klerk-details-json/roshhino",
 };
+
+export function getKlerkDetailsJSONPaths(): string {
+  return `data/klerk-details-json/${regionName}.json`;
+}
 
 export const klerkDetailsCSVPaths = {
   kirovsk: "data/klerk-details-csv/kirovsk",
