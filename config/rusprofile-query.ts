@@ -114,6 +114,24 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
       }
     ]
   ],
+  [
+    "bolshaja-izhora",
+    [
+      {
+        query: "?query=188531&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
+  [
+    "villozi",
+    [
+      {
+        query: "?query=188508&type=ul&search_inactive=2",
+        pages: 5
+      }
+    ]
+  ],
 ]);
 
 function getSearchPrefix(pageNumber: number): string {
