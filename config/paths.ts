@@ -1,6 +1,13 @@
+import { pageNumber, regionName } from "./session-variables";
+
+export function getMarkupFilePath(): string {
+  return `${markupPaths[regionName]}/${regionName}-${pageNumber}.html`;
+}
+
 export const markupFoldersPaths = {
   kirovsk: "data/markup/kirovsk",
   roshhino: "data/markup/roshhino",
+  shlisselburg: "data/markup/shlisselburg",
 };
 
 export const detailsMarkupsPaths = {
@@ -11,6 +18,7 @@ export const detailsMarkupsPaths = {
 export const markupPaths = {
   kirovsk: "data/markup/kirovsk/kirovsk",
   roshhino: "data/markup/roshhino/roshhino",
+  shlisselburg: "data/markup/shlisselburg",
 };
 
 export const linksPaths = {
