@@ -97,6 +97,33 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
     ]
   ],
   [
+    "lebjazhe-188517",
+    [
+      {
+        query: "?query=188517&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
+  [
+    "lebjazhe-188532",
+    [
+      {
+        query: "?query=188532&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
+  [
+    "lebjazhe-188535",
+    [
+      {
+        query: "?query=188535&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
+  [
     "sinjavino",
     [
       {
