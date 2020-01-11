@@ -105,6 +105,15 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
       }
     ]
   ],
+  [
+    "novosele",
+    [
+      {
+        query: "?query=188507&type=ul&search_inactive=2",
+        pages: 2
+      }
+    ]
+  ],
 ]);
 
 function getSearchPrefix(pageNumber: number): string {
