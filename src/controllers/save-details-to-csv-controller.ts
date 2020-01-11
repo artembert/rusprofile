@@ -3,13 +3,14 @@ import { getKlerkDetailsCSVPaths, getKlerkDetailsJSONPaths } from "../../config/
 import { Details } from "../types/details";
 import { convertToCsv } from "../components/convert-to-csv";
 
-export function saveDetailsToCsvController() {
+export async function saveDetailsToCsvController() {
   const details: Details[] = JSON.parse(
     fs.readFileSync(getKlerkDetailsJSONPaths(), "utf8")
   ) as Details[];
+  const csv = await convertToCsv(details);
   fs.writeFileSync(
     getKlerkDetailsCSVPaths(),
-    convertToCsv(details)
+    csv
   );
   console.log(`Details saved to ${getKlerkDetailsCSVPaths()}`);
 }

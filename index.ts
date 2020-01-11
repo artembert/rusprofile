@@ -15,6 +15,6 @@ async function processedMarkup() { // VPN NOT required
   await parseSearchPageController(); // * Parse search-pages
   await getDetailsFromKlerkController(); // * Get details from Klerk
   parseRawDetailsFromKlerkController(); // * Parse raw details from Klerk
-  saveDetailsToCsvController(); // * Convert Klerk details to CSV
+  await saveDetailsToCsvController(); // * Convert Klerk details to CSV
   printStatisticsController(); // * Statistics
 }

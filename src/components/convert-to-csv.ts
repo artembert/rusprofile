@@ -1,6 +1,10 @@
-import {Parser} from "json2csv"
+import { IFullOptions, json2csvAsync } from "json-2-csv"
 
-export function convertToCsv(dataObject: any): object {
-  const json2csvParser = new Parser(Object.keys(dataObject[0]));
-  return json2csvParser.parse(dataObject)
+const converterOptions: IFullOptions = {
+  sortHeader: true,
+  emptyFieldValue: ""
+};
+
+export async function convertToCsv(dataObject: any): Promise<string> {
+  return json2csvAsync(dataObject, converterOptions);
 }
