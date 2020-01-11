@@ -1,12 +1,11 @@
-import { linksPaths, markupFoldersPaths } from "../../config/paths";
+import { getLinksPath, getMarkupFoldersPath } from "../../config/paths";
 import { getLinksFromSearchPage } from "../components/get-links-from-search-page";
 import { getFilenamesFromFolder } from "../components/get-filenames-from-folder";
 import fs from "fs";
-import { regionName } from "../../config/session-variables";
 
 export async function getLinksFromSearchPagesController() {
-  const markupPath = markupFoldersPaths[regionName];
-  const linksPath = linksPaths[regionName];
+  const markupPath = getMarkupFoldersPath();
+  const linksPath = getLinksPath();
   const markupFilenames: string[] = await getFilenamesFromFolder(markupPath);
   const links: string[] = markupFilenames.reduce((accumulator, fileName) => {
     const links = getLinksFromSearchPage(`${markupPath}/${fileName}`);

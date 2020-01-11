@@ -30,6 +30,10 @@ export const linksPaths = {
   roshhino: "data/links/roshhino.json",
 };
 
+export function getLinksPath(): string {
+  return `data/links/${regionName}.json`;
+}
+
 export const searchPageDetailsPaths = {
   kirovsk: "data/annotations/kirovsk",
   roshhino: "data/annotations/roshhino",
