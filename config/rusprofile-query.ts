@@ -79,6 +79,15 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
     ]
   ],
   [
+    "sosnovyj-bor",
+    [
+      {
+        query: "?query=188540&type=ul&search_inactive=2",
+        pages: 4
+      }
+    ]
+  ],
+  [
     "pavlovo",
     [
       {
