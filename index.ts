@@ -7,11 +7,14 @@ import { saveDetailsToCsvController } from "./src/controllers/save-details-to-cs
 import { printStatisticsController } from "./src/controllers/print-statistics-controller";
 
 (async () => {
-  await downloadSearchPageMarkupController(); // * Download search-pages markup
-  await getLinksFromSearchPagesController(); // * Get links from search-pages. NOT REQUIRED
+  await downloadSearchPageMarkupController(); // VPN required // * Download search-pages markup
+  await processedMarkup(); // VPN NOT required
+})();
+
+async function processedMarkup() { // VPN NOT required
   await parseSearchPageController(); // * Parse search-pages
   await getDetailsFromKlerkController(); // * Get details from Klerk
   parseRawDetailsFromKlerkController(); // * Parse raw details from Klerk
   saveDetailsToCsvController(); // * Convert Klerk details to CSV
   printStatisticsController(); // * Statistics
-})();
+}
