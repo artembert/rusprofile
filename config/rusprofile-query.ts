@@ -47,15 +47,25 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
         query: "?query=188851&type=ul&search_inactive=2",
         pages: 1
       }
-    ],
-
+    ]
   ],
-  ["shlisselburg",
+  [
+    "shlisselburg",
     [
       {
         query:
           "?query=%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C+%D1%88%D0%BB%D0%B8%D1%81%D1%81%D0%B5%D0%BB%D1%8C%D0%B1%D1%83%D1%80%D0%B3&type=ul&search_inactive=2",
         pages: 2
+      }
+    ]
+  ],
+  [
+    "otradnoe",
+    [
+      {
+        query:
+          "?query=%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9E%D1%82%D1%80%D0%B0%D0%B4%D0%BD%D0%BE%D0%B5%2C&type=ul&search_inactive=2",
+        pages: 3
       }
     ]
   ]
