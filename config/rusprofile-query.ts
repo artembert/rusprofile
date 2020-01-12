@@ -124,6 +124,51 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
     ]
   ],
   [
+    "petergof-198504",
+    [
+      {
+        query: "?query=198504&type=ul&search_inactive=2",
+        pages: 4
+      }
+    ]
+  ],
+  [
+    "petergof-198510",
+    [
+      {
+        query: "?query=198510&type=ul&search_inactive=2",
+        pages: 4
+      }
+    ]
+  ],
+  [
+    "petergof-198515",
+    [
+      {
+        query: "?query=198515&type=ul&search_inactive=2",
+        pages: 3
+      }
+    ]
+  ],
+  [
+    "petergof-198516",
+    [
+      {
+        query: "?query=198516&type=ul&search_inactive=2",
+        pages: 4
+      }
+    ]
+  ],
+  [
+    "petergof-198517",
+    [
+      {
+        query: "?query=198517&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
+  [
     "priladozhskij",
     [
       {
