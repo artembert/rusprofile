@@ -5,7 +5,7 @@ import { getRusprofileQuery } from "../../config/rusprofile-query";
 import { writeMarkup } from "../write-markup";
 import { createFolderIfDoesNotExist } from "../components/create-folder-if-does-not-exist";
 
-export async function downloadSearchPageMarkupController() {
+export async function downloadSearchPageMarkupController(): Promise<void> {
   const markupFilePath = getMarkupFilePath();
   const searchPageMarkup = await getPage(getRusprofileQuery(regionName, pageNumber));
   if (searchPageMarkup) {
