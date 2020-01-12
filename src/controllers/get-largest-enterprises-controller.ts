@@ -39,7 +39,6 @@ export async function getLargestEnterprisesController(): Promise<void> {
     const enterprises = (regionsCollection[regionName] as Details[]).map(
       details => details.org_name
     );
-    console.log("enterprises", enterprises);
     (enterprisesCollection[regionName] as string[]) = enterprises;
   }
   fs.writeFileSync(
