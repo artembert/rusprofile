@@ -38,3 +38,7 @@ export function getKlerkDetailsCSVPaths(): string {
 export function getRegionCollectionJSONFilePaths(): string {
   return `data/region-collection.json`;
 }
+
+export function getEnterprisesCollectionJSONFilePaths(): string {
+  return `data/largest-enterprises-collection.json`;
+}
