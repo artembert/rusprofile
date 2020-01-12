@@ -34,3 +34,7 @@ export function getKlerkDetailsJSONPaths(customRegionName?: Region): string {
 export function getKlerkDetailsCSVPaths(): string {
   return `data/klerk-details-csv/${regionName}.csv`;
 }
+
+export function getRegionCollectionJSONFilePaths(): string {
+  return `data/region-collection.json`;
+}
