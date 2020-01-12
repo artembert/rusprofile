@@ -32,6 +32,8 @@
     "no-eval": true,
     "no-unused-expression": true,
     "no-var-keyword": true,
-    "triple-equals": true
+    "triple-equals": true,
+    "trailing-comma": true,
+    "typedef": [true, "call-signature", "parameter", "member-variable-declaration"]
   }
 }

@@ -11,7 +11,7 @@ import { printStatisticsController } from "./src/controllers/print-statistics-co
   await processedMarkup(); // VPN NOT required
 })();
 
-async function processedMarkup() { // VPN NOT required
+async function processedMarkup(): Promise<void> { // VPN NOT required
   await parseSearchPageController(); // * Parse search-pages
   await getDetailsFromKlerkController(); // * Get details from Klerk
   parseRawDetailsFromKlerkController(); // * Parse raw details from Klerk
