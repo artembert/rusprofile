@@ -1,4 +1,5 @@
 import { pageNumber, regionName } from "./session-variables";
+import { Region } from "../src/types/region";
 
 export function getMarkupFilePath(): string {
   return `${getMarkupFoldersPath()}/${regionName}-${pageNumber}.html`;
@@ -24,8 +25,10 @@ export function getKlerkDetailsRawPath(): string {
   return `data/klerk-details-raw/${regionName}.json`;
 }
 
-export function getKlerkDetailsJSONPaths(): string {
-  return `data/klerk-details-json/${regionName}.json`;
+export function getKlerkDetailsJSONPaths(customRegionName?: Region): string {
+  return `data/klerk-details-json/${
+    customRegionName ? customRegionName : regionName
+  }.json`;
 }
 
 export function getKlerkDetailsCSVPaths(): string {
