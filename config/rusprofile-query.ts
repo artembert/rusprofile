@@ -169,6 +169,24 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
     ]
   ],
   [
+    "pavlovsk-196620",
+    [
+      {
+        query: "?query=196620&type=ul&search_inactive=2",
+        pages: 4
+      }
+    ]
+  ],
+  [
+    "pavlovsk-196621",
+    [
+      {
+        query: "?query=196621&type=ul&search_inactive=2",
+        pages: 1
+      }
+    ]
+  ],
+  [
     "priladozhskij",
     [
       {

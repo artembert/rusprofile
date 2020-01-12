@@ -40,5 +40,6 @@ const regionsLoweCase = <const>[
   "petergof-198515",
   "petergof-198516",
   "petergof-198517",
-  "pavlovsk"
+  "pavlovsk-196620",
+  "pavlovsk-196621"
 ];
