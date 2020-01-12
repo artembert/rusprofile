@@ -79,6 +79,24 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
     ]
   ],
   [
+    "sestroreck-197706",
+    [
+      {
+        query: "?query=197706&type=ul&search_inactive=2",
+        pages: 6
+      }
+    ]
+  ],
+  [
+    "sestroreck-197701",
+    [
+      {
+        query: "?query=197701&type=ul&search_inactive=2",
+        pages: 2
+      }
+    ]
+  ],
+  [
     "sosnovyj-bor",
     [
       {
@@ -176,7 +194,7 @@ export const regionQuery: Map<Region, QueryProps[]> = new Map([
         pages: 5
       }
     ]
-  ],
+  ]
 ]);
 
 function getSearchPrefix(pageNumber: number): string {

@@ -32,7 +32,8 @@ const regionsLoweCase = <const>[
   "krasnoe-selo",
   "kronshtadt",
   "zelenogorsk",
-  "sestroreck",
+  "sestroreck-197701",
+  "sestroreck-197706",
   "lomonosov",
   "petergof",
   "pavlovsk"
