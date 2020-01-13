@@ -1,4 +1,4 @@
-import { Region, regionsLowerCase } from "../types/region";
+import { regionsLowerCase } from "../types/region";
 import { Details } from "../types/details";
 import fs from "fs";
 import {
@@ -7,6 +7,8 @@ import {
   getRegionCollectionJSONFilePaths
 } from "../../config/paths";
 import { promisify } from "util";
+import { EnterprisesCollection } from "../types/enterprises-collection";
+import { RegionsCollection } from "../types/regions-collection";
 
 const readFile = promisify(fs.readFile);
 
@@ -68,11 +70,3 @@ function shortenEnterpriseName(enterprise: Details): Details {
       .replace("АКЦИОНЕРНОЕ ОБЩЕСТВО", "АО")
   };
 }
-
-type RegionsCollection = {
-  [key in Region]?: Details[];
-};
-
-type EnterprisesCollection = {
-  [key in Region]?: string[];
-};
